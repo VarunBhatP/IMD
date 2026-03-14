@@ -1,0 +1,82 @@
+export const portfolioData = {
+  army: [
+    { id: 'army-1', title: "M1A2 Main Battle Tank", image: "/media/army/1.jpeg", type: "image", category: "army" },
+    { id: 'army-10', title: "Tactical Terrain Board", image: "/media/army/10.jpeg", type: "image", category: "army" },
+    { id: 'army-2', title: "Armored Personnel Carrier", image: "/media/army/2.jpeg", type: "image", category: "army" },
+    { id: 'army-11', title: "Field Base Layout", image: "/media/army/11.jpeg", type: "image", category: "army" },
+    { id: 'army-3', title: "Mobile Artillery Unit", image: "/media/army/3.jpeg", type: "image", category: "army" },
+    { id: 'army-12', title: "Strategic Command Center", image: "/media/army/12.jpeg", type: "image", category: "army" },
+    { id: 'army-4', title: "Infantry Support Vehicle", image: "/media/army/4.jpeg", type: "image", category: "army" },
+    { id: 'army-13', title: "Radar Installation Prototype", image: "/media/army/13.jpeg", type: "image", category: "army" },
+    { id: 'army-5', title: "Main Battle Tank Hull", image: "/media/army/5.jpeg", type: "image", category: "army" },
+    { id: 'army-14', title: "Logistics Transport Model", image: "/media/army/14.jpeg", type: "image", category: "army" },
+    { id: 'army-6', title: "Heavy Duty Transporter", image: "/media/army/6.jpeg", type: "image", category: "army" },
+    { id: 'army-15', title: "Combat Engineering Vehicle", image: "/media/army/15.jpeg", type: "image", category: "army" },
+    { id: 'army-7', title: "Anti-Aircraft System", image: "/media/army/7.jpeg", type: "image", category: "army" },
+    { id: 'army-16', title: "Surveillance Radar System", image: "/media/army/radar.mp4", type: "video", category: "army" },
+    { id: 'army-8', title: "Missile Launcher Platform", image: "/media/army/8.jpeg", type: "image", category: "army" },
+    { id: 'army-17', title: "Defense Perimeter Mockup", image: "/media/army/17.jpeg", type: "image", category: "army" },
+    { id: 'army-9', title: "Tactical Recon Unit", image: "/media/army/9.jpeg", type: "image", category: "army" },
+    { id: 'army-18', title: "Underground Bunker Section", image: "/media/army/18.jpeg", type: "image", category: "army" },
+    { id: 'army-19', title: "Amphibious Assault Craft", image: "/media/army/19.jpeg", type: "image", category: "army" },
+    { id: 'army-28', title: "Supply Chain Depot", image: "/media/army/28.jpeg", type: "image", category: "army" },
+    { id: 'army-20', title: "Field Hospital Module", image: "/media/army/20.jpeg", type: "image", category: "army" },
+    { id: 'army-29', title: "Maintenance Hangar", image: "/media/army/29.jpeg", type: "image", category: "army" },
+    { id: 'army-21', title: "Communication Array", image: "/media/army/21.jpeg", type: "image", category: "army" },
+    { id: 'army-30', title: "Training Ground Simulator", image: "/media/army/30.jpeg", type: "image", category: "army" },
+    { id: 'army-22', title: "Heavy Artillery Prototype", image: "/media/army/22.jpeg", type: "image", category: "army" },
+    { id: 'army-31', title: "Weapon System Testbed", image: "/media/army/31.jpeg", type: "image", category: "army" },
+    { id: 'army-23', title: "Desert Operation Base", image: "/media/army/23.jpeg", type: "image", category: "army" },
+    { id: 'army-32', title: "Vehicle Chassis Cutaway", image: "/media/army/32.jpeg", type: "image", category: "army" },
+    { id: 'army-24', title: "Mountain Outpost Model", image: "/media/army/24.jpeg", type: "image", category: "army" },
+    { id: 'army-33', title: "Propulsion Unit Assembly", image: "/media/army/33.jpeg", type: "image", category: "army" },
+    { id: 'army-25', title: "Bridge Layer Vehicle", image: "/media/army/25.jpeg", type: "image", category: "army" },
+    { id: 'army-34', title: "Internal Cockpit Layout", image: "/media/army/34.jpeg", type: "image", category: "army" },
+    { id: 'army-26', title: "Electronic Warfare Hub", image: "/media/army/26.jpeg", type: "image", category: "army" },
+    { id: 'army-35', title: "Hydraulic System Model", image: "/media/army/35.jpeg", type: "image", category: "army" },
+    { id: 'army-27', title: "Coastal Battery Mockup", image: "/media/army/27.jpeg", type: "image", category: "army" },
+    { id: 'army-36', title: "Advanced Armor Plate", image: "/media/army/36.jpeg", type: "image", category: "army" }
+  ],
+  navy: [
+    { id: 'navy-1', title: "Destroyer Cutaway", image: "/media/navy/1.jpeg", type: "image", category: "navy" },
+    { id: 'navy-5', title: "Submarine Hull Section", image: "/media/navy/5.jpeg", type: "image", category: "navy" },
+    { id: 'navy-2', title: "Dockyard Simulation", image: "/media/navy/2.jpeg", type: "image", category: "navy" },
+    { id: 'navy-6', title: "Aircraft Carrier Deck", image: "/media/navy/6.jpeg", type: "image", category: "navy" },
+    { id: 'navy-3', title: "Frigate Prototype", image: "/media/navy/3.jpeg", type: "image", category: "navy" },
+    { id: 'navy-7', title: "Hydrodynamic Test Model", image: "/media/navy/7.jpeg", type: "image", category: "navy" },
+    { id: 'navy-4', title: "Patrol Boat Mockup", image: "/media/navy/4.jpeg", type: "image", category: "navy" },
+    { id: 'navy-8', title: "Naval Base Layout", image: "/media/navy/8.jpeg", type: "image", category: "navy" }
+  ],
+  airforce: [
+    { id: 'airforce-1', title: "Fighter Jet Propulsion", image: "/media/airforce/1.mp4", type: "video", category: "airforce" },
+    { id: 'airforce-10', title: "Launch Vehicle Assembly", image: "/media/airforce/10.jpeg", type: "image", category: "airforce" },
+    { id: 'airforce-2', title: "Stealth Aircraft Prototype", image: "/media/airforce/2.jpeg", type: "image", category: "airforce" },
+    { id: 'airforce-11', title: "Full-Scale Cockpit Mockup", image: "/media/airforce/11.jpeg", type: "image", category: "airforce" },
+    { id: 'airforce-3', title: "UAV Pathfinding Logic", image: "/media/airforce/3.jpeg", type: "image", category: "airforce" },
+    { id: 'airforce-12', title: "Aviation Testing Facility", image: "/media/airforce/12.jpeg", type: "image", category: "airforce" },
+    { id: 'airforce-4', title: "Transport Aircraft Model", image: "/media/airforce/4.jpeg", type: "image", category: "airforce" },
+    { id: 'airforce-13', title: "Aerospace Component Assembly", image: "/media/airforce/13.jpeg", type: "image", category: "airforce" },
+    { id: 'airforce-5', title: "Supersonic Wing Design", image: "/media/airforce/5.jpeg", type: "image", category: "airforce" },
+    { id: 'airforce-14', title: "Satellite Ground Station", image: "/media/airforce/14.jpeg", type: "image", category: "airforce" },
+    { id: 'airforce-6', title: "Drone Swarm Simulation", image: "/media/airforce/6.jpeg", type: "image", category: "airforce" },
+    { id: 'airforce-15', title: "Jet Engine Turbine Section", image: "/media/airforce/15.jpeg", type: "image", category: "airforce" },
+    { id: 'airforce-7', title: "Reconnaissance Balloon Prototype", image: "/media/airforce/7.jpeg", type: "image", category: "airforce" },
+    { id: 'airforce-16', title: "Airfield Logistics Model", image: "/media/airforce/16.jpeg", type: "image", category: "airforce" },
+    { id: 'airforce-8', title: "Wind Tunnel Stress Test", image: "/media/airforce/8.mp4", type: "video", category: "airforce" },
+    { id: 'airforce-17', title: "Avionics System Testbed", image: "/media/airforce/17.jpeg", type: "image", category: "airforce" },
+    { id: 'airforce-9', title: "Space Habitat Module", image: "/media/airforce/9.jpeg", type: "image", category: "airforce" },
+    { id: 'airforce-18', title: "Topographic Airbase Layout", image: "/media/airforce/18.jpeg", type: "image", category: "airforce" },
+    { id: 'airforce-20', title: "Experimental Flight Deck", image: "/media/airforce/20.jpeg", type: "image", category: "airforce" }
+  ],
+  architecture: [
+    { id: 'arch-1', title: "Industrial Complex", image: "/media/architecture/1.jpeg", type: "image", category: "architecture" },
+    { id: 'arch-2', title: "Modern Stadium", image: "/media/architecture/2.jpeg", type: "image", category: "architecture" }
+  ]
+};
+
+export const allPortfolioItems = [
+  ...portfolioData.army,
+  ...portfolioData.navy,
+  ...portfolioData.airforce,
+  ...portfolioData.architecture
+];
