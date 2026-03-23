@@ -455,19 +455,18 @@ const HomePage = () => {
                 </Button>
               </div>
             </div>
-            
             <div className="grid grid-cols-2 gap-4">
               <div className="grid grid-rows-2 gap-4">
                 <PortfolioItem 
                   image="/media/army/53.jpeg" 
                   category="Army"
-                  title="Main Battle Tank"
+                  title="Main Battle Tank Model Designers in Bengaluru"
                   link="/services/army"
                 />
                 <PortfolioItem 
                   image="/media/architecture/4.jpeg" 
                   category="Industrial"
-                  title="Communication System"
+                  title="Communication System Model Designers in Bangalore"
                   link="/architecture"
                 />
               </div>
@@ -475,13 +474,13 @@ const HomePage = () => {
                 <PortfolioItem 
                   image="/media/airforce/16.jpeg" 
                   category="Aerospace"
-                  title="Aircraft Prototype"
+                  title="Aircraft Prototype Models Bengaluru"
                   link="/services/aerospace"
                 />
                 <PortfolioItem 
                   image="/media/navy/1.jpeg" 
                   category="Naval"
-                  title="Submarine Cutaway"
+                  title="Submarine Cutaway Model Makers Bangalore"
                   link="/services/navy"
                 />
               </div>
