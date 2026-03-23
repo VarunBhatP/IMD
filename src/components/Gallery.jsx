@@ -44,15 +44,13 @@ export const Lightbox = ({ item, onClose }) => {
             />
           )}
           
-          {/* Dynamic Watermark Overlay */}
-          <div className="absolute bottom-4 right-4 flex items-center gap-2 opacity-40 pointer-events-none select-none">
-            <div className="w-10 h-10 rounded-full border border-white/30 p-1 bg-black/20 backdrop-blur-sm">
-              <img src="/media/home/Logo.png" alt="IMD Logo" className="w-full h-full object-contain" />
-            </div>
-            <div className="flex flex-col text-left leading-none">
-              <span className="text-white text-[10px] font-bold tracking-widest uppercase">IMD</span>
-              <span className="text-gray-400 text-[6px] tracking-tighter uppercase">Innovative Model Designers</span>
-            </div>
+          {/* Dynamic Watermark Overlay - Dim, Round, Clean Logo */}
+          <div className="absolute inset-0 flex items-center justify-center pointer-events-none select-none overflow-hidden">
+            <img 
+              src="/media/home/Logo.png" 
+              alt="IMD Watermark" 
+              className="w-[450px] max-w-[80%] h-auto object-contain opacity-10 grayscale brightness-110 rounded-full" 
+            />
           </div>
         </div>
         
@@ -73,9 +71,12 @@ export const ScrollingGallery = ({ items }) => {
   // We ensure exactly 20 items for a consistent animation speed across all categories
   // regardless of how many original photos each category has.
   const totalDisplayItems = 20;
+  
+  // Shuffle items to avoid same images appearing close to each other
+  const shuffledItems = [...imageOnlyItems].sort(() => Math.random() - 0.5);
   const repeatedItems = [];
   for (let i = 0; i < totalDisplayItems; i++) {
-    repeatedItems.push(imageOnlyItems[i % imageOnlyItems.length]);
+    repeatedItems.push(shuffledItems[i % shuffledItems.length]);
   }
 
   return (
@@ -123,7 +124,7 @@ export const ProjectCard = ({ item, onClick }) => {
     >
       <div className="aspect-[4/3] overflow-hidden relative">
         <img 
-          src={item.image} 
+          src={isVideo ? item.thumbnail : item.image} 
           className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" 
           alt={item.title} 
         />

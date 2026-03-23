@@ -3,33 +3,11 @@ import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext.jsx';
 
 const Login = () => {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [isSignUp, setIsSignUp] = useState(false);
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
   
-  const { login, signup, googleLogin } = useAuth();
+  const { googleLogin } = useAuth();
   const navigate = useNavigate();
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    setError('');
-    setLoading(true);
-    
-    try {
-      if (isSignUp) {
-        await signup(email, password);
-      } else {
-        await login(email, password);
-      }
-      navigate('/');
-    } catch (err) {
-      setError(err.message || 'Authentication failed');
-    } finally {
-      setLoading(false);
-    }
-  };
 
   const handleGoogleLogin = async () => {
     setError('');
@@ -45,161 +23,133 @@ const Login = () => {
   };
 
   return (
-    <div className="bg-[#0f0f0f] min-h-screen flex flex-col font-sans">
-      <div className="bg-[#111] text-gray-400 py-2 border-b border-gray-800 text-sm">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-8">
-          <div className="flex items-center space-x-6">
-            <a href="mailto:info@innovativemodels.com" className="hover:text-[#FF6600] transition-colors flex items-center gap-2">
+    <div className="bg-[#0a0a0a] min-h-screen flex flex-col font-sans relative overflow-hidden">
+      {/* Background Technical Grid & Scanning Effect */}
+      <div className="absolute inset-0 z-0 opacity-20" style={{ 
+        backgroundImage: 'linear-gradient(#1a1a1a 1px, transparent 1px), linear-gradient(90deg, #1a1a1a 1px, transparent 1px)', 
+        backgroundSize: '40px 40px' 
+      }}></div>
+      <div className="absolute inset-0 z-0 opacity-10 pointer-events-none">
+        <div className="absolute top-0 left-0 w-full h-1 bg-[#FF6600] animate-scan-line"></div>
+      </div>
+
+      <div className="bg-[#111]/80 backdrop-blur-md text-gray-400 py-2 border-b border-gray-800 text-sm relative z-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row justify-between items-center h-auto sm:h-8">
+          <div className="flex items-center space-x-6 mb-2 sm:mb-0">
+            <a href="mailto:Babunr95@gmail.com" className="hover:text-[#FF6600] transition-colors flex items-center gap-2 text-[11px] uppercase tracking-tighter">
               <i className="fas fa-envelope text-[#FF6600]"></i>
-              <span>info@innovativemodels.com</span>
+              <span>Babunr95@gmail.com</span>
             </a>
-            <a href="tel:+15551234567" className="hover:text-[#FF6600] transition-colors flex items-center gap-2">
+            <a href="tel:+918123380090" className="hover:text-[#FF6600] transition-colors flex items-center gap-2 text-[11px] uppercase tracking-tighter">
               <i className="fas fa-phone text-[#FF6600]"></i>
-              <span>+91 78923-00726</span>
+              <span>+91 81233-80090</span>
             </a>
           </div>
           <div className="flex items-center space-x-4">
-            <span className="text-xs uppercase tracking-wider mr-2">Follow Us:</span>
-            <a href="#" className="hover:text-white transition-colors"><i className="fab fa-facebook-f"></i></a>
-            <a href="#" className="hover:text-white transition-colors"><i className="fab fa-twitter"></i></a>
-            <a href="#" className="hover:text-white transition-colors"><i className="fab fa-linkedin-in"></i></a>
-            <a href="#" className="hover:text-white transition-colors"><i className="fab fa-instagram"></i></a>
+            <span className="text-[10px] uppercase tracking-[0.2em] mr-2 opacity-50">Secure Communication Line</span>
           </div>
         </div>
       </div>
 
-      <div className="flex-grow flex items-center justify-center relative overflow-hidden p-6" style={{ backgroundImage: 'radial-gradient(#333 1px, transparent 1px)', backgroundSize: '20px 20px' }}>
-        <div className="absolute inset-0 z-0 pointer-events-none">
-          <i className="fas fa-cog absolute -left-40 top-1/2 -translate-y-1/2 text-[400px] text-[#1a1a1a]/40 animate-spin" style={{ animationDuration: '100s' }}></i>
-          <i className="fas fa-cog absolute -right-40 bottom-0 text-[300px] text-[#1a1a1a]/30 animate-spin" style={{ animationDuration: '80s', animationDirection: 'reverse' }}></i>
+      <div className="flex-grow relative z-10 flex items-center justify-center p-4 sm:p-8">
+        {/* Large Decorative Gears - Fixed to ensure they don't shift layout */}
+        <div className="absolute inset-0 pointer-events-none overflow-hidden flex items-center justify-center">
+          <i className="fas fa-cog absolute -left-40 -top-40 text-[600px] text-[#FF6600]/5 animate-spin" style={{ animationDuration: '80s' }}></i>
+          <i className="fas fa-cog absolute -right-40 -bottom-40 text-[500px] text-white/5 animate-spin" style={{ animationDuration: '60s', animationDirection: 'reverse' }}></i>
         </div>
 
-        <div className="w-full max-w-md relative z-10">
-          <div className="text-center mb-8">
-            <div className="inline-flex items-center gap-3 group">
-              <div className="text-[#FF6600] text-5xl group-hover:rotate-180 transition-transform duration-700">
-                <i className="fas fa-cog"></i>
-              </div>
-              <div className="flex flex-col text-left">
-                <span className="text-white text-3xl font-bold tracking-wider leading-none font-heading">INNOVATIVE</span>
-                <span className="text-gray-400 text-[10px] tracking-[0.4em] uppercase leading-none mt-1">Model Designers</span>
-              </div>
-            </div>
-          </div>
+        <div className="w-full max-w-md relative">
+          {/* Main Access Portal */}
+          <div className="bg-[#111] border border-white/5 shadow-[0_0_50px_rgba(0,0,0,0.5)] rounded-sm p-1">
+            <div className="border border-white/10 p-10 relative overflow-hidden">
+              {/* Corner Accents */}
+              <div className="absolute top-0 left-0 w-8 h-8 border-t-2 border-l-2 border-[#FF6600]"></div>
+              <div className="absolute top-0 right-0 w-8 h-8 border-t-2 border-r-2 border-[#FF6600]"></div>
+              <div className="absolute bottom-0 left-0 w-8 h-8 border-b-2 border-l-2 border-[#FF6600]"></div>
+              <div className="absolute bottom-0 right-0 w-8 h-8 border-b-2 border-r-2 border-[#FF6600]"></div>
 
-          <div className="border border-[#2d2d2d] shadow-2xl rounded-sm overflow-hidden" style={{ background: 'rgba(26, 26, 26, 0.95)', backdropFilter: 'blur(10px)' }}>
-            <div className="bg-[#2d2d2d]/50 px-8 py-4 border-b border-[#2d2d2d] flex justify-between items-center">
-              <h2 className="text-white font-bold uppercase tracking-widest text-lg font-heading">{isSignUp ? 'Create Account' : 'Secure Access'}</h2>
-              <span className="text-[10px] text-[#FF6600] font-bold uppercase tracking-tighter">Encrypted Connection</span>
-            </div>
+              <div className="text-center mb-12">
+                <div className="flex justify-center mb-6">
+                  <div className="w-24 h-24 rounded-full overflow-hidden border-2 border-[#FF6600]/30 p-2 bg-black shadow-[0_0_30px_rgba(255,102,0,0.15)] group transition-all duration-700 hover:scale-110">
+                    <img 
+                      src="/media/home/Logo.png" 
+                      alt="IMD Logo" 
+                      className="w-full h-full object-contain"
+                    />
+                  </div>
+                </div>
+                <h2 className="text-white font-heading font-bold text-4xl uppercase tracking-tighter mb-2">
+                  Secure <span className="text-[#FF6600]">Access</span>
+                </h2>
+                <div className="h-1 w-20 bg-[#FF6600] mx-auto mb-4"></div>
+                <p className="text-gray-500 text-[10px] uppercase tracking-[0.5em] font-bold">Innovative Model Designers</p>
+              </div>
 
-            <div className="p-8">
               {error && (
-                <div className="mb-4 p-3 bg-red-500/10 border border-red-500/20 text-red-500 text-xs font-bold uppercase tracking-wider rounded-sm">
+                <div className="mb-8 p-4 bg-red-500/5 border-l-4 border-red-500 text-red-500 text-[11px] font-bold uppercase tracking-widest flex items-center gap-3">
+                  <i className="fas fa-exclamation-triangle text-lg"></i>
                   {error}
                 </div>
               )}
 
-              <button 
-                onClick={handleGoogleLogin} 
-                disabled={loading}
-                className="w-full py-3 px-4 bg-white hover:bg-gray-100 text-gray-900 font-bold text-sm rounded-sm transition-all flex items-center justify-center gap-3 mb-6 disabled:opacity-50"
-              >
-                <img src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg" className="w-5 h-5" alt="Google" />
-                <span>{loading ? 'Processing...' : 'Continue with Google'}</span>
-              </button>
-
-              <div className="relative flex items-center mb-6">
-                <div className="flex-grow border-t border-[#2d2d2d]"></div>
-                <span className="flex-shrink mx-4 text-gray-500 text-[10px] uppercase font-bold tracking-widest">Or using email</span>
-                <div className="flex-grow border-t border-[#2d2d2d]"></div>
-              </div>
-
-              <form className="space-y-5" onSubmit={handleSubmit}>
-                <div>
-                  <label className="block text-gray-400 text-xs font-bold uppercase tracking-widest mb-2">Email Address</label>
-                  <div className="relative group">
-                    <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-gray-500 group-focus-within:text-[#FF6600] transition-colors">
-                      <i className="fas fa-envelope"></i>
-                    </div>
-                    <input 
-                      type="email" 
-                      placeholder="john.doe@company.com" 
-                      value={email} 
-                      onChange={(e) => setEmail(e.target.value)} 
-                      required
-                      className="w-full bg-[#0f0f0f] border border-[#2d2d2d] text-white text-sm py-3 pl-10 pr-4 focus:outline-none focus:border-[#FF6600] transition-colors rounded-sm" 
-                    />
-                  </div>
-                </div>
-                <div>
-                  <div className="flex justify-between items-center mb-2">
-                    <label className="text-gray-400 text-xs font-bold uppercase tracking-widest">Password</label>
-                    {!isSignUp && <a href="#" className="text-[#FF6600] text-[10px] uppercase font-bold hover:underline">Forgot?</a>}
-                  </div>
-                  <div className="relative group">
-                    <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-gray-500 group-focus-within:text-[#FF6600] transition-colors">
-                      <i className="fas fa-lock"></i>
-                    </div>
-                    <input 
-                      type="password" 
-                      placeholder="••••••••" 
-                      value={password} 
-                      onChange={(e) => setPassword(e.target.value)} 
-                      required
-                      className="w-full bg-[#0f0f0f] border border-[#2d2d2d] text-white text-sm py-3 pl-10 pr-4 focus:outline-none focus:border-[#FF6600] transition-colors rounded-sm" 
-                    />
-                  </div>
+              <div className="space-y-8">
+                <div className="text-center">
+                  <p className="text-gray-400 text-xs font-medium mb-8 leading-relaxed max-w-sm mx-auto">
+                    Welcome to the IMD Technical Portal. To view classified archives and request secure quotes, please verify your identity using your authorized Google account.
+                  </p>
+                  
+                  <button 
+                    onClick={handleGoogleLogin} 
+                    disabled={loading}
+                    className="w-full py-3 px-4 bg-white hover:bg-gray-100 text-gray-900 font-bold text-sm rounded-sm transition-all flex items-center justify-center gap-3 mb-6 disabled:opacity-50"
+                  >
+                    <img src="https://www.gstatic.com/firebasejs/ui/2.0.0/images/auth/google.svg" className="w-5 h-5" alt="Google" />
+                    <span>{loading ? 'Processing...' : 'Continue with Google'}</span>
+                  </button>
                 </div>
 
-                <button 
-                  type="submit" 
-                  disabled={loading}
-                  className="w-full bg-[#FF6600] hover:bg-[#e65c00] text-white font-bold py-4 px-4 rounded-sm transition-all transform active:scale-[0.98] shadow-lg shadow-[#FF6600]/20 uppercase tracking-[0.2em] text-xs disabled:opacity-50"
-                >
-                  {loading ? 'Processing...' : (isSignUp ? 'Create Account' : 'Authenticate')}
-                </button>
-              </form>
-
-              <div className="mt-8 pt-6 border-t border-[#2d2d2d] text-center">
-                <p className="text-gray-500 text-[10px] uppercase font-bold tracking-widest mb-2">
-                  {isSignUp ? 'Already have an account?' : 'Need a secure account?'}
-                </p>
-                <button 
-                  onClick={() => setIsSignUp(!isSignUp)}
-                  className="text-white hover:text-[#FF6600] text-xs font-bold uppercase tracking-widest transition-colors"
-                >
-                  {isSignUp ? 'Sign In Now' : 'Request Access / Sign Up'}
-                </button>
+                <div className="pt-8 border-t border-white/5 flex flex-col items-center gap-4">
+                  <div className="flex items-center gap-2 text-[#FF6600]/60">
+                    <i className="fas fa-lock text-[10px]"></i>
+                    <span className="text-[10px] font-bold uppercase tracking-[0.2em]">End-to-End Encrypted Authentication</span>
+                  </div>
+                  <div className="flex gap-4">
+                    <div className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse"></div>
+                    <div className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse" style={{ animationDelay: '0.2s' }}></div>
+                    <div className="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse" style={{ animationDelay: '0.4s' }}></div>
+                  </div>
+                </div>
               </div>
-            </div>
-          </div>
-
-          <div className="mt-8 flex justify-center items-center gap-6">
-            <div className="flex items-center gap-2 grayscale opacity-50">
-              <i className="fas fa-shield-alt text-gray-500"></i>
-              <span className="text-[10px] text-gray-500 uppercase font-bold tracking-tighter">NIST Compliant</span>
-            </div>
-            <div className="flex items-center gap-2 grayscale opacity-50">
-              <i className="fas fa-user-secret text-gray-500"></i>
-              <span className="text-[10px] text-gray-500 uppercase font-bold tracking-tighter">Level 4 Clearance Required</span>
             </div>
           </div>
         </div>
       </div>
 
-      <footer className="bg-[#0f0f0f] border-t border-[#2d2d2d] py-6">
+      <footer className="bg-[#0a0a0a] border-t border-white/5 py-8 relative z-20">
         <div className="max-w-7xl mx-auto px-4 text-center">
-          <p className="text-[10px] text-gray-600 uppercase tracking-widest font-bold mb-2">
-            © 2024 Innovative Model Designers • All Activity Monitored & Logged
+          <p className="text-[10px] text-gray-600 uppercase tracking-[0.4em] font-bold mb-4">
+            © 2026 Innovative Model Designers • Defense Procurement Division
           </p>
-          <div className="flex justify-center space-x-6 text-[10px] text-gray-500 font-bold uppercase tracking-tighter">
-            <a href="#" className="hover:text-[#FF6600] transition-colors">Terms of Engagement</a>
-            <a href="#" className="hover:text-[#FF6600] transition-colors">Security Protocol</a>
-            <a href="#" className="hover:text-[#FF6600] transition-colors">Support Desk</a>
+          <div className="flex justify-center space-x-8 text-[9px] text-gray-500 font-bold uppercase tracking-widest">
+            <span className="flex items-center gap-2"><i className="fas fa-circle text-[6px] text-[#FF6600]"></i> SSL SECURED</span>
+            <span className="flex items-center gap-2"><i className="fas fa-circle text-[6px] text-[#FF6600]"></i> AES-256</span>
+            <span className="flex items-center gap-2"><i className="fas fa-circle text-[6px] text-[#FF6600]"></i> PRIVACY COMPLIANT</span>
           </div>
         </div>
       </footer>
+
+      <style>
+        {`
+          @keyframes scan-line {
+            0% { transform: translateY(-100vh); opacity: 0; }
+            50% { opacity: 0.5; }
+            100% { transform: translateY(100vh); opacity: 0; }
+          }
+          .animate-scan-line {
+            animation: scan-line 4s linear infinite;
+          }
+        `}
+      </style>
     </div>
   );
 };

@@ -8,7 +8,7 @@ const Army = () => {
       <section className="bg-[#111] py-32 relative overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img 
-            src="/media/army/27.jpeg" 
+            src="/media/army/10.jpeg" 
             alt="Army Background" 
             className="w-full h-full object-cover opacity-50"
           />

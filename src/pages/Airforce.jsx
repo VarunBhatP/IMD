@@ -8,7 +8,7 @@ const Airforce = () => {
       <section className="bg-[#111] py-32 relative overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img 
-            src="/media/home/jet.webp" 
+            src="/media/airforce/15.jpeg" 
             alt="Airforce Background" 
             className="w-full h-full object-cover opacity-50"
           />

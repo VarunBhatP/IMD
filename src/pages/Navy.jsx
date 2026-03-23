@@ -8,7 +8,7 @@ const Navy = () => {
       <section className="bg-[#111] py-32 relative overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img 
-            src="/media/home/submarine.webp" 
+            src="/media/navy/4.jpeg" 
             alt="Navy Background" 
             className="w-full h-full object-cover opacity-50"
           />

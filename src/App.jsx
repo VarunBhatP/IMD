@@ -49,23 +49,31 @@ const Button = ({ children, onClick, variant = 'primary', className = '', ...pro
 };
 
 const ServiceCard = ({ icon, title, description, link, borderColor = 'border-[#FF6600]' }) => {
+  const navigate = useNavigate();
   return (
-    <div className={`bg-white p-8 shadow-xl border-t-4 ${borderColor} group hover:-translate-y-2 transition-transform duration-300`}>
+    <div 
+      onClick={() => navigate(link)}
+      className={`bg-white p-8 shadow-xl border-t-4 ${borderColor} group hover:-translate-y-2 transition-transform duration-300 cursor-pointer`}
+    >
       <div className="w-16 h-16 bg-gray-100 rounded-lg flex items-center justify-center mb-6 group-hover:bg-[#FF6600] group-hover:text-white transition-colors duration-300 text-gray-700">
         <i className={`${icon} text-3xl`}></i>
       </div>
       <h3 className="text-2xl font-heading font-bold text-gray-800 mb-3 group-hover:text-[#FF6600] transition-colors">{title}</h3>
       <p className="text-gray-600 text-sm leading-relaxed mb-6">{description}</p>
-      <Link to={link} className="inline-flex items-center text-xs font-bold text-[#FF6600] uppercase tracking-widest hover:text-black transition-colors">
+      <div className="inline-flex items-center text-xs font-bold text-[#FF6600] uppercase tracking-widest hover:text-black transition-colors">
         Explore {title.split(' ')[0]} <i className="fas fa-long-arrow-alt-right ml-2"></i>
-      </Link>
+      </div>
     </div>
   );
 };
 
-const PortfolioItem = ({ image, category, title, colSpan = '', rowSpan = '' }) => {
+const PortfolioItem = ({ image, category, title, link, colSpan = '', rowSpan = '' }) => {
+  const navigate = useNavigate();
   return (
-    <div className={`${colSpan} ${rowSpan} group relative overflow-hidden bg-black cursor-pointer rounded-sm shadow-lg`}>
+    <div 
+      onClick={() => link && navigate(link)}
+      className={`${colSpan} ${rowSpan} group relative overflow-hidden bg-black cursor-pointer rounded-sm shadow-lg`}
+    >
       <img 
         src={image} 
         alt={title} 
@@ -111,27 +119,24 @@ const Header = () => {
   return (
     <>
       <div className="bg-[#111] text-white py-2 border-b border-gray-800 text-sm">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row justify-between items-center h-auto sm:h-8">
-          <div className="flex items-center space-x-6 mb-2 sm:mb-0">
-            <a href="mailto:info@innovativemodels.com" className="hover:text-[#FF6600] transition-colors flex items-center gap-2">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center h-auto sm:h-10">
+          <div className="flex flex-wrap justify-between items-center w-full gap-y-2">
+            <a href="mailto:Babunr95@gmail.com" className="hover:text-[#FF6600] transition-colors flex items-center gap-2 text-sm font-bold">
               <i className="fas fa-envelope text-[#FF6600]"></i>
               <span>Babunr95@gmail.com</span>
             </a>
-            <a href="tel:+15551234567" className="hover:text-[#FF6600] transition-colors flex items-center gap-2">
+            <a href="mailto:innovativemodeldesigners@gmail.com" className="hover:text-[#FF6600] transition-colors flex items-center gap-2 text-sm font-bold">
+              <i className="fas fa-envelope text-[#FF6600]"></i>
+              <span>innovativemodeldesigners@gmail.com</span>
+            </a>
+            <a href="tel:+918123380090" className="hover:text-[#FF6600] transition-colors flex items-center gap-2 text-sm font-bold">
               <i className="fas fa-phone text-[#FF6600]"></i>
               <span>+91 81233-80090</span>
             </a>
-            <a href="tel:+15551234567" className="hover:text-[#FF6600] transition-colors flex items-center gap-2">
+            <a href="tel:+917892300726" className="hover:text-[#FF6600] transition-colors flex items-center gap-2 text-sm font-bold">
               <i className="fas fa-phone text-[#FF6600]"></i>
-              <span>+91 7892300726</span>
+              <span>+91 78923-00726</span>
             </a>
-          </div>
-          <div className="flex items-center space-x-4">
-            <span className="hidden sm:inline text-xs uppercase tracking-wider mr-2">Follow Us:</span>
-            <a href="#" className="hover:text-white transition-colors"><i className="fab fa-facebook-f"></i></a>
-            <a href="#" className="hover:text-white transition-colors"><i className="fab fa-twitter"></i></a>
-            <a href="#" className="hover:text-white transition-colors"><i className="fab fa-linkedin-in"></i></a>
-            <a href="#" className="hover:text-white transition-colors"><i className="fab fa-instagram"></i></a>
           </div>
         </div>
       </div>
@@ -213,7 +218,7 @@ const Header = () => {
                 </div>
               )}
               <Link to="/quote" className="ml-4 px-6 py-3 bg-[#FF6600] hover:bg-[#e65c00] text-white font-heading font-bold uppercase tracking-wider text-sm rounded transition-all shadow-lg hover:shadow-orange-500/30 transform hover:-translate-y-0.5">
-                Get A Quote
+                Contact Us
               </Link>
             </div>
 
@@ -278,7 +283,10 @@ const Footer = () => {
             <ul className="space-y-4 text-sm">
               <li className="flex items-start">
                 <i className="fas fa-map-marker-alt text-[#FF6600] mr-3 mt-1"></i>
-                <span>1234 Defense Way, Suite 100<br />Arlington, VA 22202</span>
+                <span>
+                #95, 1st Main Road, 4th Cross
+                MSJ Layout, Near BMTC Bus Garage, Dasana Pura Post,
+                Bangalore - 562123, Karnataka, India</span>
               </li>
               <li className="flex items-center">
                 <i className="fas fa-phone text-[#FF6600] mr-3"></i>
@@ -287,7 +295,11 @@ const Footer = () => {
               </li>
               <li className="flex items-center">
                 <i className="fas fa-envelope text-[#FF6600] mr-3"></i>
-                <span>contact@innovativemodels.com</span>
+                <span>innovativemodeldesigners@gmail.com</span>
+              </li>
+              <li className="flex items-center">
+                <i className="fas fa-envelope text-[#FF6600] mr-3"></i>
+                <span>Babunr95@gmail.com</span>
               </li>
             </ul>
           </div>
@@ -295,7 +307,7 @@ const Footer = () => {
 
         <div className="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-gray-600">
           <p className="mb-4 md:mb-0">
-            © 2026 Innovative Model Designers. All Rights Reserved.
+            © 2026 Innovative Model Designers. All Rights Reserved. Developed by <a href="https://portfolio-varunbhatp.netlify.app/" target="_blank" rel="noopener noreferrer" className="text-[#FF6600] hover:underline font-bold">Varun Bhat P</a>
           </p>
           <div className="flex space-x-6">
             <Link to="/privacy" className="hover:text-white transition-colors">Privacy Policy</Link>
@@ -323,7 +335,7 @@ const HomePage = () => {
 
         <div className="absolute inset-0 z-10">
           <img 
-            src="/media/home/fighter.jpg" 
+            src="/media/airforce/15.jpeg" 
             alt="Detailed Tank Model" 
             className="w-full h-full object-cover opacity-300 mix-blend-screen"
           />
@@ -447,26 +459,30 @@ const HomePage = () => {
             <div className="grid grid-cols-2 gap-4">
               <div className="grid grid-rows-2 gap-4">
                 <PortfolioItem 
-                  image="/media/home/tank.webp" 
+                  image="/media/army/53.jpeg" 
                   category="Army"
                   title="Main Battle Tank"
+                  link="/services/army"
                 />
                 <PortfolioItem 
-                  image="/media/home/hydraulic.webp" 
+                  image="/media/architecture/4.jpeg" 
                   category="Industrial"
-                  title="Hydraulic Assembly"
+                  title="Communication System"
+                  link="/architecture"
                 />
               </div>
               <div className="grid grid-rows-2 gap-4">
                 <PortfolioItem 
-                  image="/media/home/fighter2.jpg" 
+                  image="/media/airforce/16.jpeg" 
                   category="Aerospace"
                   title="Aircraft Prototype"
+                  link="/services/aerospace"
                 />
                 <PortfolioItem 
-                  image="/media/home/submarine.webp" 
+                  image="/media/navy/1.jpeg" 
                   category="Naval"
                   title="Submarine Cutaway"
+                  link="/services/navy"
                 />
               </div>
             </div>
@@ -474,20 +490,32 @@ const HomePage = () => {
         </div>
       </section>
 
-      <section className="bg-[#0f0f0f]" style={customStyles.clipSlantRight}>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
-            <div className="bg-[#1a1a1a] border border-[#2a2a2a] rounded-sm p-6 text-center">
-              <StatCard icon="fas fa-clipboard-check" number="1,250+" label="Projects Delivered" />
+      <section className="bg-[#0f0f0f] relative overflow-hidden">
+        <div className="absolute inset-0 z-0 opacity-20" style={{ 
+          backgroundImage: 'linear-gradient(#1a1a1a 1px, transparent 1px), linear-gradient(90deg, #1a1a1a 1px, transparent 1px)', 
+          backgroundSize: '40px 40px' 
+        }}></div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 relative z-10">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div className="bg-[#1a1a1a] border border-white/5 p-8 text-center group hover:border-[#FF6600]/30 transition-all duration-500 rounded-sm">
+              <i className="fas fa-microchip text-[#FF6600] text-3xl mb-4 opacity-80 group-hover:scale-110 transition-transform"></i>
+              <h4 className="text-white font-heading font-bold uppercase tracking-widest text-sm mb-2">Technical Precision</h4>
+              <p className="text-gray-500 text-[10px] uppercase tracking-tighter leading-relaxed">Advanced Engineering & CAD Integration</p>
             </div>
-            <div className="bg-[#1a1a1a] border border-[#2a2a2a] rounded-sm p-6 text-center">
-              <StatCard icon="fas fa-shield-alt" number="85+" label="Defense Clients" />
+            <div className="bg-[#1a1a1a] border border-white/5 p-8 text-center group hover:border-[#FF6600]/30 transition-all duration-500 rounded-sm">
+              <i className="fas fa-user-shield text-[#FF6600] text-3xl mb-4 opacity-80 group-hover:scale-110 transition-transform"></i>
+              <h4 className="text-white font-heading font-bold uppercase tracking-widest text-sm mb-2">Classified Protocol</h4>
+              <p className="text-gray-500 text-[10px] uppercase tracking-tighter leading-relaxed">Secure Data Handling & Confidentiality</p>
             </div>
-            <div className="bg-[#1a1a1a] border border-[#2a2a2a] rounded-sm p-6 text-center">
-              <StatCard icon="fas fa-award" number="40+" label="Industry Awards" />
+            <div className="bg-[#1a1a1a] border border-white/5 p-8 text-center group hover:border-[#FF6600]/30 transition-all duration-500 rounded-sm">
+              <i className="fas fa-layer-group text-[#FF6600] text-3xl mb-4 opacity-80 group-hover:scale-110 transition-transform"></i>
+              <h4 className="text-white font-heading font-bold uppercase tracking-widest text-sm mb-2">Material Science</h4>
+              <p className="text-gray-500 text-[10px] uppercase tracking-tighter leading-relaxed">High-Fidelity Composite Fabrication</p>
             </div>
-            <div className="bg-[#1a1a1a] border border-[#2a2a2a] rounded-sm p-6 text-center">
-              <StatCard icon="fas fa-globe-americas" number="22" label="Countries Served" />
+            <div className="bg-[#1a1a1a] border border-white/5 p-8 text-center group hover:border-[#FF6600]/30 transition-all duration-500 rounded-sm">
+              <i className="fas fa-vial text-[#FF6600] text-3xl mb-4 opacity-80 group-hover:scale-110 transition-transform"></i>
+              <h4 className="text-white font-heading font-bold uppercase tracking-widest text-sm mb-2">Rapid Prototyping</h4>
+              <p className="text-gray-500 text-[10px] uppercase tracking-tighter leading-relaxed">Iterative Design & Testing Cycles</p>
             </div>
           </div>
         </div>
@@ -604,11 +632,10 @@ const AboutPage = () => {
   </div>
 </div>
           <div className="grid grid-cols-2 gap-4">
-            <img src="/public/media/airforce/13.jpeg" alt="Precision Tools" className="rounded-sm shadow-lg" />
-            <img src="/public/media/army/31.jpeg" alt="Prototyping" className="rounded-sm shadow-lg" />
-            <img src="/public/media/army/2.jpeg" alt="Workshop 1" className="rounded-sm shadow-lg" />
-            <img src="/public/media/navy/2.jpeg" alt="Workshop 2" className="rounded-sm shadow-lg" />
-            
+            <img src="/media/airforce/20.jpeg" alt="Precision 3D Scale Models" className="rounded-sm shadow-lg" />
+            <img src="/media/army/31.jpeg" alt="Military Engineering Prototyping" className="rounded-sm shadow-lg" />
+            <img src="/media/army/2.jpeg" alt="Industrial Model Design Workshop" className="rounded-sm shadow-lg" />
+            <img src="/media/navy/3.jpeg" alt="Naval Vessel Scale Models" className="rounded-sm shadow-lg" />
           </div>
         </div>
       </div>
@@ -672,7 +699,7 @@ const PortfolioPage = () => {
       <div className="bg-[#1a1a1a] text-white py-40 relative overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img 
-            src="/media/home/submarine.webp" 
+            src="/media/airforce/16.jpeg" 
             alt="Portfolio Background" 
             className="w-full h-full object-cover opacity-50"
           />
@@ -707,17 +734,43 @@ const QuotePage = () => {
 
     // Replace with your EmailJS service details
     const SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
-    const TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+    const ADMIN_TEMPLATE_ID = import.meta.env.VITE_EMAILJS_ADMIN_TEMPLATE_ID || import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+    const USER_TEMPLATE_ID = import.meta.env.VITE_EMAILJS_USER_TEMPLATE_ID;
     const PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 
-    emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, formRef.current, PUBLIC_KEY)
-      .then((result) => {
-          console.log(result.text);
+    // Debugging: Check if variables are loaded (look in F12 console)
+    console.log("EmailJS Debug:", {
+      serviceId: !!SERVICE_ID,
+      adminTemplateId: !!ADMIN_TEMPLATE_ID,
+      userTemplateId: !!USER_TEMPLATE_ID,
+      publicKey: !!PUBLIC_KEY
+    });
+
+    if (!SERVICE_ID || !PUBLIC_KEY) {
+      setError("EmailJS Configuration is missing in .env file.");
+      setLoading(false);
+      return;
+    }
+
+    // Send Admin Notification
+    const sendAdmin = emailjs.sendForm(SERVICE_ID, ADMIN_TEMPLATE_ID, formRef.current, PUBLIC_KEY);
+    
+    // Send Auto-Reply to User (only if USER_TEMPLATE_ID is provided)
+    const sendUser = USER_TEMPLATE_ID 
+      ? emailjs.sendForm(SERVICE_ID, USER_TEMPLATE_ID, formRef.current, PUBLIC_KEY)
+      : Promise.resolve();
+
+    Promise.all([sendAdmin, sendUser])
+      .then((results) => {
+          console.log("Both emails sent successfully:", results);
           setSuccess(true);
           formRef.current.reset();
-      }, (error) => {
-          console.log(error.text);
-          setError('Failed to send message. Please try again later.');
+      })
+      .catch((err) => {
+          // This will log exactly what is wrong in your browser console (F12)
+          console.error("Detailed Email Error:", err);
+          const errorMsg = err?.text || err?.message || 'Check your Template IDs and Public Key.';
+          setError(`Failed to send: ${errorMsg}`);
       })
       .finally(() => {
         setLoading(false);
@@ -845,7 +898,7 @@ const QuotePage = () => {
                 </div>
                 <div className="flex justify-between border-b border-gray-100 pb-2">
                   <span className="text-gray-500">Saturday</span>
-                  <span className="font-bold text-gray-900">09:00 AM - 02:00 PM</span>
+                  <span className="font-bold text-gray-900">09:00 AM - 06:00 PM</span>
                 </div>
                 <div className="flex justify-between">
                   <span className="text-gray-500">Sunday</span>

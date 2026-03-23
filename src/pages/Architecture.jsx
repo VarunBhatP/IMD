@@ -8,7 +8,7 @@ const Architecture = () => {
       <section className="bg-[#111] py-32 relative overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img 
-            src="/media/home/architecture.webp" 
+            src="/media/architecture/4.jpeg" 
             alt="Architecture Background" 
             className="w-full h-full object-cover opacity-50"
           />
