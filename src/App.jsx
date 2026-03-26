@@ -90,9 +90,9 @@ const PortfolioItem = ({ image, category, title, link, colSpan = '', rowSpan = '
          </div>
        </div>
 
-      <div className="absolute bottom-0 left-0 p-8 transform translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
-        <span className="px-2 py-1 bg-[#FF6600] text-white text-[10px] font-bold uppercase tracking-widest mb-2 inline-block">{category}</span>
-        <h4 className="text-2xl font-heading font-bold text-white uppercase">{title}</h4>
+      <div className="absolute bottom-0 left-0 p-4 md:p-8 transform translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
+        <span className="px-2 py-0.5 md:py-1 bg-[#FF6600] text-white text-[8px] md:text-[10px] font-bold uppercase tracking-widest mb-1 md:mb-2 inline-block">{category}</span>
+        <h4 className="text-sm md:text-2xl font-heading font-bold text-white uppercase leading-tight">{title}</h4>
       </div>
     </div>
   );
@@ -118,34 +118,38 @@ const Header = () => {
 
   return (
     <>
-      <div className="bg-[#111] text-white py-2 border-b border-gray-800 text-sm">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center h-auto sm:h-10">
-          <div className="flex flex-wrap justify-between items-center w-full gap-y-2">
-            <a href="mailto:Babunr95@gmail.com" className="hover:text-[#FF6600] transition-colors flex items-center gap-2 text-sm font-bold">
-              <i className="fas fa-envelope text-[#FF6600]"></i>
-              <span>Babunr95@gmail.com</span>
-            </a>
-            <a href="mailto:innovativemodeldesigners@gmail.com" className="hover:text-[#FF6600] transition-colors flex items-center gap-2 text-sm font-bold">
-              <i className="fas fa-envelope text-[#FF6600]"></i>
-              <span>innovativemodeldesigners@gmail.com</span>
-            </a>
-            <a href="tel:+918123380090" className="hover:text-[#FF6600] transition-colors flex items-center gap-2 text-sm font-bold">
-              <i className="fas fa-phone text-[#FF6600]"></i>
-              <span>+91 81233-80090</span>
-            </a>
-            <a href="tel:+917892300726" className="hover:text-[#FF6600] transition-colors flex items-center gap-2 text-sm font-bold">
-              <i className="fas fa-phone text-[#FF6600]"></i>
-              <span>+91 78923-00726</span>
-            </a>
+      <div className="bg-[#111] text-white py-2 border-b border-gray-800 text-sm hidden md:block">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center h-10">
+          <div className="flex justify-between items-center w-full">
+            <div className="flex gap-6">
+              <a href="mailto:Babunr95@gmail.com" className="hover:text-[#FF6600] transition-colors flex items-center gap-2 text-sm font-bold">
+                <i className="fas fa-envelope text-[#FF6600]"></i>
+                <span>Babunr95@gmail.com</span>
+              </a>
+              <a href="mailto:innovativemodeldesigners@gmail.com" className="hover:text-[#FF6600] transition-colors flex items-center gap-2 text-sm font-bold">
+                <i className="fas fa-envelope text-[#FF6600]"></i>
+                <span>innovativemodeldesigners@gmail.com</span>
+              </a>
+            </div>
+            <div className="flex gap-6">
+              <a href="tel:+918123380090" className="hover:text-[#FF6600] transition-colors flex items-center gap-2 text-sm font-bold">
+                <i className="fas fa-phone text-[#FF6600]"></i>
+                <span>+91 81233-80090</span>
+              </a>
+              <a href="tel:+917892300726" className="hover:text-[#FF6600] transition-colors flex items-center gap-2 text-sm font-bold">
+                <i className="fas fa-phone text-[#FF6600]"></i>
+                <span>+91 78923-00726</span>
+              </a>
+            </div>
           </div>
         </div>
       </div>
 
       <nav className="bg-[#1a1a1a] sticky top-0 z-50 shadow-2xl border-b-4 border-[#FF6600]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between h-24">
-            <Link to="/" className="flex items-center gap-3 group">
-              <div className="w-12 h-12 rounded-full overflow-hidden border border-gray-600 flex-shrink-0">
+          <div className="flex justify-between h-16 md:h-24">
+            <Link to="/" className="flex items-center gap-2 md:gap-3 group overflow-hidden">
+              <div className="w-8 h-8 md:w-12 md:h-12 rounded-full overflow-hidden border border-gray-600 flex-shrink-0">
                 <img 
                   src="/media/home/Logo.png" 
                   alt="Logo" 
@@ -153,11 +157,11 @@ const Header = () => {
                 />
               </div>
 
-            <div className="flex flex-col justify-center">
-            <span className="text-white font-bold text-3xl tracking-wide" style={{ fontFamily: "Times New Roman, serif" }}>
-            INNOVATIVE MODEL DESIGNERS
-            </span>
-          </div>
+              <div className="flex flex-col justify-center">
+                <span className="text-white font-bold text-lg md:text-3xl tracking-wide whitespace-nowrap" style={{ fontFamily: "Times New Roman, serif" }}>
+                  INNOVATIVE MODEL DESIGNERS
+                </span>
+              </div>
             </Link>
 
             <div className="hidden md:flex items-center space-x-1">
@@ -173,7 +177,7 @@ const Header = () => {
                   <Link to="/services/army" className="block px-4 py-3 text-sm text-white hover:bg-[#333] hover:text-[#FF6600] transition-colors border-b border-gray-800">Army & Land</Link>
                   <Link to="/services/navy" className="block px-4 py-3 text-sm text-white hover:bg-[#333] hover:text-[#FF6600] transition-colors border-b border-gray-800">Navy & Maritime</Link>
                   <Link to="/services/aerospace" className="block px-4 py-3 text-sm text-white hover:bg-[#333] hover:text-[#FF6600] transition-colors">Aerospace</Link>
-                  <Link to="/architecture" className="block px-4 py-3 text-sm text-white hover:bg-[#333] hover:text-[#FF6600] transition-colors">Achitecture</Link>
+                  <Link to="/architecture" className="block px-4 py-3 text-sm text-white hover:bg-[#333] hover:text-[#FF6600] transition-colors">Architecture</Link>
                 </div>
               </div>
 
@@ -226,9 +230,108 @@ const Header = () => {
               <button 
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
                 className="text-gray-300 hover:text-white focus:outline-none p-2"
+                aria-label="Toggle Menu"
               >
-                <i className="fas fa-bars text-2xl"></i>
+                <i className={`fas ${mobileMenuOpen ? 'fa-times' : 'fa-bars'} text-2xl`}></i>
               </button>
+            </div>
+          </div>
+        </div>
+
+        {/* Mobile Menu Dropdown */}
+        <div className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out ${mobileMenuOpen ? 'max-h-[600px] border-t border-gray-800' : 'max-h-0'}`}>
+          <div className="bg-[#1a1a1a] px-4 pt-2 pb-6 space-y-1 shadow-inner">
+            <Link 
+              to="/" 
+              onClick={() => setMobileMenuOpen(false)}
+              className="block px-4 py-3 text-white font-heading font-medium tracking-wide text-sm uppercase hover:bg-[#333] hover:text-[#FF6600] transition-colors rounded"
+            >
+              Home
+            </Link>
+            <Link 
+              to="/about" 
+              onClick={() => setMobileMenuOpen(false)}
+              className="block px-4 py-3 text-white font-heading font-medium tracking-wide text-sm uppercase hover:bg-[#333] hover:text-[#FF6600] transition-colors rounded"
+            >
+              About
+            </Link>
+            
+            <div className="space-y-1">
+              <div className="px-4 py-3 text-gray-500 font-heading font-bold text-[10px] uppercase tracking-[0.2em] border-b border-gray-800/50 mb-1">
+                Our Services
+              </div>
+              <Link 
+                to="/services/army" 
+                onClick={() => setMobileMenuOpen(false)}
+                className="block px-8 py-3 text-white font-heading font-medium tracking-wide text-xs uppercase hover:bg-[#333] hover:text-[#FF6600] transition-colors rounded"
+              >
+                Army & Land
+              </Link>
+              <Link 
+                to="/services/navy" 
+                onClick={() => setMobileMenuOpen(false)}
+                className="block px-8 py-3 text-white font-heading font-medium tracking-wide text-xs uppercase hover:bg-[#333] hover:text-[#FF6600] transition-colors rounded"
+              >
+                Navy & Maritime
+              </Link>
+              <Link 
+                to="/services/aerospace" 
+                onClick={() => setMobileMenuOpen(false)}
+                className="block px-8 py-3 text-white font-heading font-medium tracking-wide text-xs uppercase hover:bg-[#333] hover:text-[#FF6600] transition-colors rounded"
+              >
+                Aerospace
+              </Link>
+              <Link 
+                to="/architecture" 
+                onClick={() => setMobileMenuOpen(false)}
+                className="block px-8 py-3 text-white font-heading font-medium tracking-wide text-xs uppercase hover:bg-[#333] hover:text-[#FF6600] transition-colors rounded"
+              >
+                Architecture
+              </Link>
+            </div>
+
+            <Link 
+              to="/portfolio" 
+              onClick={() => setMobileMenuOpen(false)}
+              className="block px-4 py-3 text-white font-heading font-medium tracking-wide text-sm uppercase hover:bg-[#333] hover:text-[#FF6600] transition-colors rounded"
+            >
+              Portfolio
+            </Link>
+
+            {!user ? (
+              <Link 
+                to="/login" 
+                onClick={() => setMobileMenuOpen(false)}
+                className="block px-4 py-3 text-white font-heading font-medium tracking-wide text-sm uppercase hover:bg-[#333] hover:text-[#FF6600] transition-colors rounded"
+              >
+                Login
+              </Link>
+            ) : (
+              <div className="border-t border-gray-800 pt-4 mt-4">
+                <div className="px-4 py-2 flex items-center gap-3">
+                  <div className="w-8 h-8 rounded-full bg-[#FF6600] flex items-center justify-center text-white font-bold text-xs uppercase">
+                    {user?.email?.[0]?.toUpperCase() || 'U'}
+                  </div>
+                  <span className="text-white text-xs font-medium truncate">{user.displayName || user.email}</span>
+                </div>
+                <button
+                  onClick={() => { logout(); setMobileMenuOpen(false); }}
+                  className="w-full text-left px-4 py-3 text-sm text-gray-400 hover:text-white hover:bg-[#333] transition-colors flex items-center gap-2"
+                >
+                  <i className="fas fa-sign-out-alt"></i>
+                  <span>Logout Session</span>
+                </button>
+              </div>
+            )}
+
+            <div className="pt-4 px-2">
+              <Link 
+                to="/quote" 
+                onClick={() => setMobileMenuOpen(false)}
+                className="block w-full text-center py-4 bg-[#FF6600] text-white font-heading font-bold uppercase tracking-widest text-sm rounded shadow-lg"
+              >
+                Contact Us
+              </Link>
             </div>
           </div>
         </div>
@@ -326,18 +429,18 @@ const HomePage = () => {
 
   return (
     <>
-      <header className="relative w-full h-[575px] bg-black overflow-hidden">
+      <header className="relative w-full h-[500px] md:h-[575px] bg-black overflow-hidden">
         {/* Large High-Contrast Spinning Gear Background */}
         <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden bg-[#050505]">
-          <i className="fas fa-cog absolute -left-40 -top-40 text-[650px] text-white/10 animate-spin" style={{ animationDuration: '30s' }}></i>
-          <i className="fas fa-cog absolute -right-60 -bottom-60 text-[550px] text-[#FF6600]/10 animate-spin" style={{ animationDuration: '50s', animationDirection: 'reverse' }}></i>
+          <i className="fas fa-cog absolute -left-20 -top-20 md:-left-40 md:-top-40 text-[300px] md:text-[650px] text-white/10 animate-spin" style={{ animationDuration: '30s' }}></i>
+          <i className="fas fa-cog absolute -right-30 -bottom-30 md:-right-60 md:-bottom-60 text-[250px] md:text-[550px] text-[#FF6600]/10 animate-spin" style={{ animationDuration: '50s', animationDirection: 'reverse' }}></i>
         </div>
 
         <div className="absolute inset-0 z-10">
           <img 
             src="/media/airforce/15.jpeg" 
             alt="Detailed Tank Model" 
-            className="w-full h-full object-cover opacity-300 mix-blend-screen"
+            className="w-full h-full object-cover opacity-60 md:opacity-300 md:mix-blend-screen"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-black via-black/80 to-transparent"></div>
           <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
@@ -345,27 +448,27 @@ const HomePage = () => {
 
         <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full flex flex-col justify-center">
           <div className="max-w-3xl">
-            <div className="inline-block px-4 py-1 bg-[#FF6600]/90 backdrop-blur-sm text-white text-xs font-bold uppercase tracking-[0.2em] mb-6 border-l-4 border-white">
+            <div className="inline-block px-3 py-1 md:px-4 md:py-1 bg-[#FF6600]/90 backdrop-blur-sm text-white text-[10px] md:text-xs font-bold uppercase tracking-[0.2em] mb-4 md:mb-6 border-l-4 border-white">
               Official Defense Contractor
             </div>
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-4 leading-tight uppercase drop-shadow-lg">
-              Precision Scale <br />
+            <h1 className="text-3xl md:text-7xl font-bold text-white mb-4 leading-tight uppercase drop-shadow-lg">
+              Precision Scale <br className="hidden md:block" />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#FF6600] to-yellow-500">Models For Defense</span>
             </h1>
-            <p className="text-gray-300 text-lg md:text-xl mb-10 max-w-2xl leading-relaxed font-light border-l-2 border-gray-600 pl-6">
+            <p className="text-gray-300 text-sm md:text-xl mb-8 md:mb-10 max-w-2xl leading-relaxed font-light border-l-2 border-gray-600 pl-4 md:pl-6">
               Delivering high-fidelity technical replicas and engineering prototypes for military applications. We bridge the gap between concept and reality with unmatched detail.
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <button 
                 onClick={() => navigate('/portfolio')}
-                className="px-8 py-4 bg-[#FF6600] hover:bg-[#e65c00] text-white font-heading font-bold uppercase tracking-widest rounded-sm transition-all duration-300 flex items-center justify-center gap-3 shadow-lg group"
+                className="w-full sm:w-auto px-8 py-4 bg-[#FF6600] hover:bg-[#e65c00] text-white font-heading font-bold uppercase tracking-widest rounded-sm transition-all duration-300 flex items-center justify-center gap-3 shadow-lg group"
               >
                 View Portfolio
                 <i className="fas fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
               </button>
               <button 
                 onClick={() => navigate('/contact')}
-                className="px-8 py-4 bg-transparent border-2 border-white/30 hover:bg-white hover:text-black hover:border-white text-white font-heading font-bold uppercase tracking-widest rounded-sm transition-all duration-300 flex items-center justify-center"
+                className="w-full sm:w-auto px-8 py-4 bg-transparent border-2 border-white/30 hover:bg-white hover:text-black hover:border-white text-white font-heading font-bold uppercase tracking-widest rounded-sm transition-all duration-300 flex items-center justify-center"
               >
                 Contact Us
               </button>
@@ -373,8 +476,8 @@ const HomePage = () => {
           </div>
         </div>
 
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center animate-bounce">
-          <span className="text-gray-500 text-[10px] uppercase tracking-widest mb-2">Scroll Down</span>
+        <div className="absolute bottom-4 md:bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center animate-bounce">
+          <span className="text-gray-500 text-[8px] md:text-[10px] uppercase tracking-widest mb-1 md:mb-2">Scroll Down</span>
           <i className="fas fa-chevron-down text-[#FF6600]"></i>
         </div>
       </header>
