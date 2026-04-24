@@ -438,7 +438,7 @@ const HomePage = () => {
 
         <div className="absolute inset-0 z-10">
           <img 
-            src="/media/army/53.jpeg" 
+            src="/media/army/28.jpeg" 
             alt="Detailed Tank Model" 
             className="w-full h-full object-cover opacity-60 md:opacity-300 md:mix-blend-screen"
           />
