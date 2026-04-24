@@ -438,7 +438,7 @@ const HomePage = () => {
 
         <div className="absolute inset-0 z-10">
           <img 
-            src="/media/airforce/15.jpeg" 
+            src="/media/army/53.jpeg" 
             alt="Detailed Tank Model" 
             className="w-full h-full object-cover opacity-60 md:opacity-300 md:mix-blend-screen"
           />
@@ -575,7 +575,7 @@ const HomePage = () => {
               </div>
               <div className="grid grid-rows-2 gap-4">
                 <PortfolioItem 
-                  image="/media/airforce/16.jpeg" 
+                  image="/media/airforce/48.jpeg" 
                   category="Aerospace"
                   title="Aircraft Prototype Models Bengaluru"
                   link="/services/aerospace"

@@ -66,62 +66,52 @@ export const portfolioData = {
     { id: 'navy-6', title: "SHIP BORNE SONAR SYSTEM", image: "/media/navy/6.jpeg", type: "image", category: "navy" },
     { id: 'navy-11', title: "IN-222 NAUSENA", image: "/media/navy/11.jpeg", type: "image", category: "navy" },
     { id: 'navy-1', title: "HEAUV MISSILE", image: "/media/navy/1.jpeg", type: "image", category: "navy" },
-    { id: 'navy-16', title: "TEDBF INDIAN NAVY FIGHTER JET", image: "/media/navy/16.jpeg", type: "image", category: "navy" },
+    
     { id: 'navy-5', title: "SWATI SHIP MODEL", image: "/media/navy/5.jpeg", type: "image", category: "navy" },
     { id: 'navy-13', title: "TEDBF INDIAN NAVY FIGHTER JET", image: "/media/navy/13.jpeg", type: "image", category: "navy" },
     { id: 'navy-8', title: "SHIP BORNE SONAR SYSTEM", image: "/media/navy/8.jpeg", type: "image", category: "navy" }
   ],
   airforce: [
-    { id: 'airforce-34', title: "AMCA FIGHTER JET", image: "/media/airforce/34.jpeg", type: "image", category: "airforce" },
-    { id: 'airforce-33', title: "AMCA FIGHTER JET (DOWN VIEW)", image: "/media/airforce/33.jpeg", type: "image", category: "airforce" },
-    { id: 'airforce-42', title: "ABHYAS MISSILE SYSTEM", image: "/media/airforce/42.jpeg", type: "image", category: "airforce" },
-    { id: 'airforce-v1', title: "LCA TEJAS MK-1 FIGHTER JET", image: "/media/airforce/1.mp4", thumbnail: "/media/airforce/15.jpeg", type: "video", category: "airforce" },
+    
     { id: 'airforce-28', title: "LUH HELICOPTER", image: "/media/airforce/28.jpeg", type: "image", category: "airforce" },
     { id: 'airforce-48', title: "C132 CARRIER AIRCRAFT", image: "/media/airforce/48.jpeg", type: "image", category: "airforce" },
-    { id: 'airforce-31', title: "LCA AF MK2", image: "/media/airforce/31.jpeg", type: "image", category: "airforce" },
+    
     { id: 'airforce-v2', title: "COMPACT OPTICAL ELECTRO AIRBORNE", image: "/media/airforce/8.mp4", thumbnail: "/media/airforce/14.jpeg", type: "video", category: "airforce" },
     { id: 'airforce-21', title: "LUH", image: "/media/airforce/21.jpeg", type: "image", category: "airforce" },
     { id: 'airforce-40', title: "LUH ARMY VERSION", image: "/media/airforce/40.jpeg", type: "image", category: "airforce" },
-    { id: 'airforce-11', title: "LCA TEJAS MK-1A", image: "/media/airforce/11.jpeg", type: "image", category: "airforce" },
+    
     { id: 'airforce-59', title: "C-130J AIRCRAFT", image: "/media/airforce/59.jpeg", type: "image", category: "airforce" },
     { id: 'airforce-v3', title: "2D AMDR", image: "/media/airforce/19.mp4", thumbnail: "/media/airforce/3.jpeg", type: "video", category: "airforce" },
     { id: 'airforce-44', title: "VERTICAL LAUNCHER UNIT", image: "/media/airforce/44.jpeg", type: "image", category: "airforce" },
-    { id: 'airforce-35', title: "AMCA FIGHTER JET", image: "/media/airforce/35.jpeg", type: "image", category: "airforce" },
     { id: 'airforce-14', title: "AKASH MISSILE SYSTEM", image: "/media/airforce/14.jpeg", type: "image", category: "airforce" },
     { id: 'airforce-50', title: "C132 CARRIER AIRCRAFT", image: "/media/airforce/50.jpeg", type: "image", category: "airforce" },
    { id: 'airforce-29', title: "DORNIER-228", image: "/media/airforce/29.jpeg", type: "image", category: "airforce" },
-    { id: 'airforce-15', title: "TEJAS FIGHTER JET", image: "/media/airforce/15.jpeg", type: "image", category: "airforce" },
-    { id: 'airforce-47', title: "HJT-36 FIGHTER JET", image: "/media/airforce/47.jpeg", type: "image", category: "airforce" },
     
+    { id: 'airforce-47', title: "HJT-36 FIGHTER JET", image: "/media/airforce/47.jpeg", type: "image", category: "airforce" },
     { id: 'airforce-25', title: "RADAR SYSTEM MONITOR", image: "/media/airforce/25.jpeg", type: "image", category: "airforce" },
     { id: 'airforce-60', title: "HTT-40", image: "/media/airforce/60.jpeg", type: "image", category: "airforce" },
     { id: 'airforce-30', title: "DORNIER-228", image: "/media/airforce/30.jpeg", type: "image", category: "airforce" },
     { id: 'airforce-27', title: "LUH HELICOPTER", image: "/media/airforce/27.jpeg", type: "image", category: "airforce" },
     { id: 'airforce-49', title: "CH47 AIRCRAFT", image: "/media/airforce/49.jpeg", type: "image", category: "airforce" },
-    { id: 'airforce-16', title: "LCA TEJAS MK-1 FIGHTER JET", image: "/media/airforce/16.jpeg", type: "image", category: "airforce" },
+    
     { id: 'airforce-39', title: "LUH ARMY HELICOPTER", image: "/media/airforce/39.jpeg", type: "image", category: "airforce" },
     { id: 'airforce-43', title: "GSLV MK-III", image: "/media/airforce/43.jpeg", type: "image", category: "airforce" },
-    { id: 'airforce-24', title: "AMCA FIGHTER JET", image: "/media/airforce/24.jpeg", type: "image", category: "airforce" },
-    { id: 'airforce-10', title: "AMCA FIGHTER JET(DOWN VIEW)", image: "/media/airforce/10.jpeg", type: "image", category: "airforce" },
     { id: 'airforce-58', title: "CH47 AIRCRAFT", image: "/media/airforce/58.jpeg", type: "image", category: "airforce" },
-    { id: 'airforce-32', title: "LCA AF MK2", image: "/media/airforce/32.jpeg", type: "image", category: "airforce" },
+    
     { id: 'airforce-41', title: "ABHYAS MISSILE SYSTEM", image: "/media/airforce/41.jpeg", type: "image", category: "airforce" },
-    { id: 'airforce-46', title: "LCA TEJAS", image: "/media/airforce/46.jpeg", type: "image", category: "airforce" },
-    { id: 'airforce-20', title: "LCA AF MK2", image: "/media/airforce/20.jpeg", type: "image", category: "airforce" },
+    
+   
     { id: 'airforce-38', title: "LEH HELICOPTER", image: "/media/airforce/38.jpeg", type: "image", category: "airforce" },
     { id: 'airforce-45', title: "VERTICAL LAUNCHER UNIT", image: "/media/airforce/45.jpeg", type: "image", category: "airforce" },
     { id: 'airforce-23', title: "LUH", image: "/media/airforce/23.jpeg", type: "image", category: "airforce" },
-    { id: 'airforce-36', title: "AMCA FIGHTER JET", image: "/media/airforce/36.jpeg", type: "image", category: "airforce" },
     { id: 'airforce-4', title: "SATELLITE SYSTEM", image: "/media/airforce/4.jpeg", type: "image", category: "airforce" },
     { id: 'airforce-3', title: "SOTM", image: "/media/airforce/3.jpeg", type: "image", category: "airforce" },
     { id: 'airforce-22', title: "LEH HELICOPTER", image: "/media/airforce/22.jpeg", type: "image", category: "airforce" },
-    { id: 'airforce-17', title: "LCA AF MK2", image: "/media/airforce/17.jpeg", type: "image", category: "airforce" },
+    
     { id: 'airforce-5', title: "SRI JITENDRA J JADHAV", image: "/media/airforce/5.jpeg", type: "image", category: "airforce" },
     { id: 'airforce-26', title: "REMOTE CRONTROLLED WEAPON STATION", image: "/media/airforce/26.jpeg", type: "image", category: "airforce" },
     { id: 'airforce-6', title: "EO/IR GIMBAL CAMERA SYSTEMS", image: "/media/airforce/6.jpeg", type: "image", category: "airforce" },
-    { id: 'airforce-18', title: "LCA AF MK2", image: "/media/airforce/18.jpeg", type: "image", category: "airforce" },
-    { id: 'airforce-7', title: "AMCA FIGHTER JET", image: "/media/airforce/7.jpeg", type: "image", category: "airforce" },
-    { id: 'airforce-9', title: "AMCA FIGHTER JET", image: "/media/airforce/9.jpeg", type: "image", category: "airforce" }
+    
   ],
   architecture: [
     { id: 'arch-4', title: "TACTICAL DEPLOYMENT OF MCT", image: "/media/architecture/4.jpeg", type: "image", category: "architecture" },
